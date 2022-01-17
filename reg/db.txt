@@ -1,0 +1,16 @@
+-- Table: public.reg
+
+-- DROP TABLE public.reg;
+
+CREATE TABLE IF NOT EXISTS public.reg
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    login character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT reg_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.reg
+    OWNER to postgres;
